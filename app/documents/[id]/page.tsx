@@ -1,26 +1,12 @@
-import { Editor } from "@/components/editor/Editor";
-import Header from "@/components/Header";
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import CollaborativeRoom from "@/components/CollaborativeRoom";
 import React from "react";
 
 const Document = () => {
   return (
-    <div>
-      <Header>
-        <div className="flex w-fit items-center justify-center gap-2">
-          <p className="document-title">Share</p>
-        </div>
+    <main className="flex flex-col items-center w-full">
+      <CollaborativeRoom />
 
-        <SignedOut>
-          <SignInButton />
-          <SignUpButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-      </Header>
-      <Editor />
-    </div>
+    </main>
   );
 };
 
